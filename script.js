@@ -5,7 +5,7 @@ let obstacleSpeed = 2;
 
 function startGame() {
   myGamePiece = new component(40, 40, "yellow", 40, 40);
-  scoreDisplay = new component("20px", "Consolas", "black", 350, 30, "text");
+  scoreDisplay = new component("20px", "Consolas", "black", 30, 30, "text");
   myGameArea.start();
 }
 
