@@ -23,3 +23,5 @@ The game gets faster the longer you survive. How far can you go?
 ## 🛠 How to Run
 
 Clone the repo or download the HTML file
+or
+https://ira4a.github.io/runner-game/
