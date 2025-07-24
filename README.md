@@ -12,6 +12,10 @@ The game gets faster the longer you survive. How far can you go?
 - Your **score** (based on time survived) is shown in the top-right corner
 - The game **ends on collision** with any obstacle
 
+<p align="center">
+  <img src="2025-07-24_11h40_27.mp4" alt="Game Play" width="480"/>
+</p>
+
 ## 🚀 Features
 
 - Smooth animation using `setInterval`
@@ -24,3 +28,4 @@ The game gets faster the longer you survive. How far can you go?
 
 Clone the repo or download the HTML file
 
+2025-07-24_11h40_27.mp4
