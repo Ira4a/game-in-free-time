@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     canvas {
-      border: 2px solid yellow;
+      border: 3px solid yellow;
       background-color: #f1f1f1;
     }
     body {
@@ -21,9 +21,10 @@
 let myGamePiece;
 let myObstacles = [];
 let scoreDisplay;
+let obstacleSpeed = 2; // начальная скорость препятствий
 
 function startGame() {
-  myGamePiece = new component(30, 30, "yellow", 30, 30);
+  myGamePiece = new component(40, 40, "yellow", 40, 40);
   scoreDisplay = new component("20px", "Consolas", "black", 370, 30, "text");
   myGameArea.start();
 }
@@ -31,8 +32,8 @@ function startGame() {
 const myGameArea = {
   canvas: document.createElement("canvas"),
   start: function() {
-    this.canvas.width = 480;
-    this.canvas.height = 270;
+    this.canvas.width = 500;
+    this.canvas.height = 300;
     this.context = this.canvas.getContext("2d");
     document.body.insertBefore(this.canvas, document.body.firstChild);
     this.frameNo = 0;
@@ -112,6 +113,10 @@ function updateGameArea() {
   myGameArea.clear();
   myGameArea.frameNo += 1;
 
+  if (everyinterval(200)) {
+    obstacleSpeed += 0.2; 
+  }
+
   if (myGameArea.frameNo === 1 || everyinterval(150)) {
     let x = myGameArea.canvas.width;
     let minHeight = 20;
@@ -123,7 +128,7 @@ function updateGameArea() {
   }
 
   for (let i = 0; i < myObstacles.length; i++) {
-    myObstacles[i].x -= 2;
+    myObstacles[i].x -= obstacleSpeed;
     myObstacles[i].update();
   }
 
