@@ -27,5 +27,3 @@ The game gets faster the longer you survive. How far can you go?
 ## 🛠 How to Run
 
 Clone the repo or download the HTML file
-
-2025-07-24_11h40_27.mp4
