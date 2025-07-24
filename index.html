@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <style>
     canvas {
-      border: 1px solid #d3d3d3;
+      border: 2px solid yellow;
       background-color: #f1f1f1;
     }
     body {
@@ -17,15 +17,13 @@
 </head>
 <body onload="startGame()">
 
-<p>Use arrow keys to move the red square. Avoid the green obstacles!</p>
-
 <script>
 let myGamePiece;
 let myObstacles = [];
 let scoreDisplay;
 
 function startGame() {
-  myGamePiece = new component(30, 30, "red", 50, 120);
+  myGamePiece = new component(30, 30, "yellow", 30, 30);
   scoreDisplay = new component("20px", "Consolas", "black", 370, 30, "text");
   myGameArea.start();
 }
